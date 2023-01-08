@@ -4,7 +4,7 @@ import Button from "@mui/material/Button";
 
 function button(props: any) {
   return (
-    <Button variant="outlined" href={props.Valor}>
+    <Button variant="outlined" draggable={false} href={props.Valor}>
       Abrir
     </Button>
   );

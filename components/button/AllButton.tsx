@@ -21,7 +21,7 @@ function AllButton(props: any) {
         ""
       )}
       <div>
-        <Button variant="contained" color="primary" href={props.Estadisticas}>
+        <Button variant="contained" color="primary" draggable={false} href={props.Estadisticas}>
           Estadisticas
         </Button>
       </div>

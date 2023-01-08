@@ -9,13 +9,13 @@ import Divider from "@mui/material/Divider";
 export default () => {
   return (
     <div className="test" unselectable="on">
-    <Container maxWidth="sm">
-      <Box sx={{ width: "100%", maxWidth: 700, m: 2 }}>
+      <Container maxWidth="sm">
         <Header />
-        <Divider />
-        <AllMatchs />
-      </Box>
-    </Container>
+        <Box sx={{ width: "100%", maxWidth: 700, m: 2 }}>
+          <Divider />
+          <AllMatchs />
+        </Box>
+      </Container>
     </div>
   );
 };

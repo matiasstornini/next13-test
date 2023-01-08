@@ -1,4 +1,3 @@
-import React from "react";
 import Typography from "@mui/material/Typography";
 import { styled } from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
@@ -8,6 +7,7 @@ import RefreshIcon from "@mui/icons-material/Refresh";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import Stack from "@mui/material/Stack";
+import { useRouter } from 'next/router'
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -19,6 +19,7 @@ const Item = styled(Paper)(({ theme }) => ({
 
 
 function Header() {
+  const router = useRouter()
   return (
     <Grid container spacing={3}>
       <Grid item xs={12}>
@@ -34,6 +35,7 @@ function Header() {
             <Button
               color="primary"
               target="_blank"
+              draggable={false}
               href="https://www.facebook.com/innovadesignalp"
             >
               <FacebookIcon />
@@ -42,6 +44,7 @@ function Header() {
             <Button
               color="secondary"
               target="_blank"
+              draggable={false}
               href="https://www.instagram.com/innovadesignalp/"
             >
               <InstagramIcon />
@@ -51,7 +54,7 @@ function Header() {
         <p></p>
         <div>
           <Stack direction="row" spacing={2}>
-            <Button variant="outlined" color="primary" >
+            <Button variant="outlined" color="primary" onClick={() => router.reload()}>
               <RefreshIcon />
             </Button>
           </Stack>
