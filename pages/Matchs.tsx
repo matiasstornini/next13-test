@@ -18,11 +18,12 @@ export default () => {
         </Box>
       </Container>
       <Script
+        id="Script 1"
         strategy="lazyOnload"
         src="https://www.googletagmanager.com/gtag/js?id=G-00NP669MKP"
       />
 
-      <Script strategy="lazyOnload">
+      <Script strategy="lazyOnload" id="Script 2">
         {`
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
