@@ -5,6 +5,7 @@ import Container from "@mui/material/Container";
 import Header from "../components/header";
 import AllMatchs from "../components/AllMatchs";
 import Divider from "@mui/material/Divider";
+import Script from "next/script";
 
 export default () => {
   return (
@@ -16,6 +17,21 @@ export default () => {
           <AllMatchs />
         </Box>
       </Container>
+      <Script
+        strategy="lazyOnload"
+        src="https://www.googletagmanager.com/gtag/js?id=G-00NP669MKP"
+      />
+
+      <Script strategy="lazyOnload">
+        {`
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-00NP669MKP', {
+        page_path: window.location.pathname,
+        });
+    `}
+      </Script>
     </div>
   );
 };
