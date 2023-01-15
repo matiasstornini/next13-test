@@ -1,22 +1,18 @@
 import React from "react";
 import Typography from "@mui/material/Typography";
 import Botones from "./button/AllButton";
+import { getFormattedTime } from "./utils";
 
 const GetMatchs = (props: any) => {
-  var dta = [];
-  var date = new Date(props.dt * 1000);
-  var hours = "0" + date.getHours();
-  var minutes = "0" + date.getMinutes();
-  var formattedTime =
-    hours.substr(-2) + ":" + minutes.substr(-2); /*+ ':' + seconds.substr(-2)*/
-  dta.push(formattedTime);
+  const { todos } = props;
+
   return (
     <div>
-      <Typography>{props.Competicion}:</Typography>{" "}
+      <Typography>{todos.Competicion}:</Typography>{" "}
       <Typography variant="h6" gutterBottom>
-        {dta} {props.Partido}
+      {getFormattedTime(todos)} {todos.Partido}
       </Typography>
-      <Botones {...props} />
+      <Botones {...todos} />
       <p></p>
     </div>
   );
