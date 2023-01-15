@@ -5,37 +5,43 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import { getFormattedTime } from "../utils";
+
 
 import Botones from "../button/AllButton";
 
 const Cards = (props: any) => {
-  var dta = [];
-  var date = new Date(props.dt * 1000);
-  var hours = "0" + date.getHours();
-  var minutes = "0" + date.getMinutes();
-  var formattedTime =
-    hours.substr(-2) + ":" + minutes.substr(-2); /*+ ':' + seconds.substr(-2)*/
-  dta.push(formattedTime);
+  const { todos } = props;
+  const todo = todos[0];
+
   return (
-    <Card sx={{ maxWidth: 345 }}>
-      <CardMedia
-        component="img"
-        alt="green iguana"
-        height="140"
-        image="https://mui.com/static/images/cards/contemplative-reptile.jpg"
-      />
-      <CardContent>
-        <Typography variant="body2" color="text.secondary">
-          {props.liga}:
-        </Typography>
-        <Typography gutterBottom variant="h6" component="div">
-          {dta} {props.partido}
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Botones {...props} />
-      </CardActions>
-    </Card>
+    <div>
+      <Typography gutterBottom variant="h5" component="h2">
+        Evento destacado:
+      </Typography>
+      {todo && (
+        <Card sx={{ maxWidth: 345 }}>
+          <CardMedia
+            component="img"
+            alt={todo.Partido}
+            height="140"
+            image={todo.Image}
+          />
+          <CardContent>
+            <Typography variant="body2" color="text.secondary">
+              {todo.Competicion}:
+            </Typography>
+            <Typography gutterBottom variant="h6" component="div">
+            {getFormattedTime(todo)} {todo.Partido}
+            </Typography>
+          </CardContent>
+          <CardActions>
+            <Botones {...todo} />
+          </CardActions>
+        </Card>
+      )}
+    </div>
   );
 };
+
 export default Cards;

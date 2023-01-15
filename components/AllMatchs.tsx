@@ -1,33 +1,22 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Container from "@mui/material/Container";
 import GetMatchs from "../components/GetMatchs";
 import Cards from "../components/card/Cards";
 import Typography from "@mui/material/Typography";
 
-export default () => {
-  const [data, setData] = useState<any[]>([]);
+export default (props: any) => {
+  const { todos } = props;
 
-
-  useEffect(() => {
-    // API to fetch some dummy data
-    fetch(
-      "https://redcardfut2.netlify.app/Datos.json"
-    )
-      .then((resp) => resp.json())
-      .then((apiData) => {
-        setData(apiData);
-      });
-  }, []); // Dependency-array
 
   return (
     <Container maxWidth="sm">
-      {!data
+      {!todos
         ? "Cargando..."
-        : data.map((item, index) => {
+        : todos.map((todo:any , index:any) => {
             return (
               <div key={index}>
 
-                <GetMatchs {...item} />
+                <GetMatchs {...todo} />
               </div>
             );
           })}
