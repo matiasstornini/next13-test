@@ -12,7 +12,7 @@ import Botones from "../button/AllButton";
 
 const Cards = (props: any) => {
   const { todos } = props;
-  const todo = todos[0];
+  const todo = todos[4];
 
   return (
     <div>

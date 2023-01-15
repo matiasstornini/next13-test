@@ -8,11 +8,11 @@ const GetMatchs = (props: any) => {
 
   return (
     <div>
-      <Typography>{todos.Competicion}:</Typography>{" "}
+      <Typography>{props.Competicion}:</Typography>{" "}
       <Typography variant="h6" gutterBottom>
-      {getFormattedTime(todos)} {todos.Partido}
+      {getFormattedTime(props)} {props.Partido}
       </Typography>
-      <Botones {...todos} />
+      <Botones {...props} />
       <p></p>
     </div>
   );

@@ -28,7 +28,10 @@ export default () => {
         <Header />
         <Box sx={{ width: "100%", maxWidth: 700, m: 2 }}>
           <Destacado todos={todos}/>
+          <p></p>
           <Divider />
+          <p></p>
+
           <AllMatchs todos={todos}/>
         </Box>
       </Container>
