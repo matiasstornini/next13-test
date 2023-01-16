@@ -4,7 +4,7 @@ import Container from "@mui/material/Container";
 /*Componets*/
 import Header from "../components/header";
 import AllMatchs from "../components/AllMatchs";
-import Destacado from "../components/card/Cards";
+// import Destacado from "../components/card/Cards";
 import Divider from "@mui/material/Divider";
 import Script from "next/script";
 import { fetchApi } from "../components/api";
@@ -27,8 +27,8 @@ export default () => {
       <Container maxWidth="sm">
         <Header />
         <Box sx={{ width: "100%", maxWidth: 700, m: 2 }}>
-          <Destacado todos={todos}/>
-          <p></p>
+          {/* <Destacado todos={todos}/>
+          <p></p> */}
           <Divider />
           <p></p>
 
