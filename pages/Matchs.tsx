@@ -9,18 +9,23 @@ import Divider from "@mui/material/Divider";
 import Script from "next/script";
 import { fetchApi } from "../components/api";
 
+// separa este componente en dos, el fetch por un lado, y el resto por otro
 
 export default () => {
-  const [todos, setTodos] = useState([]);
-
-  const fetchData = async () => {
-    const response = await fetchApi(); // aquí se obtienen los datos del JSON
-    setTodos(response); // aquí se asignan los datos al estado del componente
-  };
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetchData();
-  }, []); // se ejecutará cada vez que se renderiza el componente
+    fetchApi()
+      .then((url) => fetch(url))
+      .then((res) => res.text())
+      .then((data) => {
+        const json = JSON.parse(data.substr(47).slice(0, -2));
+        setData(json.table.rows);
+        setLoading(false);
+      });
+  }, []);
+
 
   return (
     <div className="test" unselectable="on">
@@ -32,7 +37,7 @@ export default () => {
           <Divider />
           <p></p>
 
-          <AllMatchs todos={todos}/>
+          <AllMatchs todos={data}/>
         </Box>
       </Container>
       <Script

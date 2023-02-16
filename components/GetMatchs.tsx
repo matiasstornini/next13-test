@@ -8,9 +8,9 @@ const GetMatchs = (props: any) => {
 
   return (
     <div>
-      <Typography>{props.Competicion}:</Typography>{" "}
+      <Typography>{props.c[2].v}:</Typography>{" "}
       <Typography variant="h6" gutterBottom>
-      {getFormattedTime(props)} {props.Partido}
+      {props.c[1].v}
       </Typography>
       <Botones {...props} />
       <p></p>
