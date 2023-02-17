@@ -1,34 +1,30 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## App partidos de futbol
 
-## Getting Started
+Este es un proyecto en Next.js 13 con TypeScript que muestra los partidos de fútbol del día. Utiliza MUI 5 para la interfaz de usuario y hace fetch de un archivo JSON que es una hoja de cálculo de Google Sheets.
 
-First, run the development server:
+Constantes de la aplicación
+La aplicación utiliza las siguientes constantes en el archivo api.tsx para conectarse a la hoja de cálculo de Google Sheets:
 
 ```bash
-npm run dev
-# or
-yarn dev
+const url = "https://docs.google.com/spreadsheets/d/";
+const ssid = "1uD_UtAaYl8lh7w_8VWRCnVi-Ugat-O_2V-puezenbdw";
+const q1 = "/gviz/tq?";
+const q2 = "tqx=out:json";
+const q3 = "sheet=Admin";
+return `${url}${ssid}${q1}&${q2}&${q3}`;
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Funcionalidades
+La página muestra los partidos de fútbol del día y tiene un botón "Estadísticas". Además, en la hora del evento, se habilitan botones para verlo.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Ejecutar la aplicación
+Para ejecutar la aplicación, asegúrese de tener Node.js instalado en su computadora y ejecute los siguientes comandos:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+```bash
+npm install
+npm run dev
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+La aplicación se iniciará en http://localhost:3000/.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+¡Disfruta la aplicación!
