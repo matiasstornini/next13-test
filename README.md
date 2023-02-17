@@ -1,4 +1,4 @@
-## App partidos de futbol
+# App partidos de futbol
 
 Este es un proyecto en Next.js 13 con TypeScript que muestra los partidos de fútbol del día. Utiliza MUI 5 para la interfaz de usuario y hace fetch de un archivo JSON que es una hoja de cálculo de Google Sheets.
 

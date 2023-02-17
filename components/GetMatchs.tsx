@@ -10,7 +10,7 @@ const GetMatchs = (props: any) => {
     <div>
       <Typography>{props.c[2].v}:</Typography>{" "}
       <Typography variant="h6" gutterBottom>
-      {props.c[1].v}
+      {getFormattedTime(props)} {props.c[1].v}
       </Typography>
       <Botones {...props} />
       <p></p>
