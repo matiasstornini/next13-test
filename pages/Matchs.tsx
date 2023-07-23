@@ -4,7 +4,7 @@ import Container from "@mui/material/Container";
 /*Componets*/
 import Header from "../components/header";
 import AllMatchs from "../components/AllMatchs";
-// import Destacado from "../components/card/Cards";
+import Destacado from "../components/card/Cards";
 import Divider from "@mui/material/Divider";
 import Script from "next/script";
 import { fetchApi } from "../components/api";
@@ -32,7 +32,7 @@ export default () => {
       <Container maxWidth="sm">
         <Header />
         <Box sx={{ width: "100%", maxWidth: 700, m: 2 }}>
-          {/* <Destacado todos={todos}/>
+          {/* <Destacado todos={data}/>
           <p></p> */}
           <Divider />
           <p></p>
@@ -40,22 +40,7 @@ export default () => {
           <AllMatchs todos={data}/>
         </Box>
       </Container>
-      <Script
-        id="Script 1"
-        strategy="lazyOnload"
-        src="https://www.googletagmanager.com/gtag/js?id=G-00NP669MKP"
-      />
 
-      <Script strategy="lazyOnload" id="Script 2">
-        {`
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-00NP669MKP', {
-        page_path: window.location.pathname,
-        });
-    `}
-      </Script>
     </div>
   );
 };

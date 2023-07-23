@@ -31,7 +31,7 @@ function Header() {
           <Item>
             {" "}
             <Typography variant="h3" gutterBottom>
-              PirloTV
+              Calendario
             </Typography>
             <div>
               <Typography variant="h6" component="h6">
