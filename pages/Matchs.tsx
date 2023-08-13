@@ -44,8 +44,7 @@ export default () => {
       <Container maxWidth="sm">
         <Header />
         <Box sx={{ width: "100%", maxWidth: 700, m: 2 }}>
-        <Typography>Un clic en un anuncio antes, durante o después del partido nos ayuda mucho. ¡Gracias por tu apoyo!</Typography>{" "}
-
+        {/*<Typography>Un clic en un anuncio antes, durante o después del partido nos ayuda mucho. ¡Gracias por tu apoyo!</Typography>{" "}*/}
           {/* <Destacado todos={data}/>
           <p></p> */}
           <Divider />
