@@ -50,8 +50,8 @@ export default () => {
           <p></p> */}
           <Divider />
           <p></p>
-
-          <AllMatchs todos={data}/>
+          <Typography>Este calendario no está actualizado, actualice la app TecladoAPP. Si no la tiene, contactese por Instagram: @innovadesignalp</Typography>
+          {/* <AllMatchs todos={data}/> */}
         </Box>
       </Container>
 
