@@ -35,6 +35,7 @@ function Header() {
             gtag('config', 'G-Q2P0Y6GEP3');
           `}
         </script>
+        <script type="text/javascript" data-cmp-ab="1" src="https://cdn.consentmanager.net/delivery/autoblocking/261ee43342e66.js" data-cmp-host="b.delivery.consentmanager.net" data-cmp-cdn="cdn.consentmanager.net" data-cmp-codesrc="16"></script>
       </Head>
       <Grid container spacing={3}>
         <Grid item xs={12}>
