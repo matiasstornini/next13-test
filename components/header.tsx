@@ -25,13 +25,14 @@ function Header() {
       <Head>
         <title>PirloTV nextjs</title>
         {/* Agrega los scripts de Google Analytics aquí */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-00NP669MKP"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q2P0Y6GEP3"></script>
         <script>
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-00NP669MKP');
+
+            gtag('config', 'G-Q2P0Y6GEP3');
           `}
         </script>
       </Head>
