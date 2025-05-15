@@ -24,6 +24,8 @@ function Header() {
     <>
       <Head>
         <title>PirloTV nextjs</title>
+                  {/* eslint-disable-next-line @next/next/no-sync-scripts */}
+
         {/* Agrega los scripts de Google Analytics aquí */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q2P0Y6GEP3"></script>
         <script>

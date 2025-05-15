@@ -49,6 +49,8 @@ export default () => {
           {/* <Destacado todos={data}/>
           <p></p> */}
           <Divider />
+                    {/* eslint-disable-next-line @next/next/no-sync-scripts */}
+
           <Script
             data-cfasync="false" // Nota: los atributos con guiones se escriben con camelCase en JSX, pero next/script maneja algunos atributos data-* directamente. Puedes probar con camelCase si hay problemas.
             async
