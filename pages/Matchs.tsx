@@ -49,6 +49,8 @@ export default () => {
           {/* <Destacado todos={data}/>
           <p></p> */}
           <Divider />
+          <script data-cfasync='false' async type='text/javascript' src='//thedreamofus.xyz/ads?name=1&id=22'></script>
+          <Divider />
           <p></p>
 {/*           <Typography>Este calendario no está actualizado, actualice la app TecladoAPP. Si no la tiene, contactese por Instagram: @innovadesignalp</Typography> */}
           <AllMatchs todos={data}/>
